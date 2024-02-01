@@ -1,11 +1,14 @@
-import express from 'express' 
-import connection from './Data/Data.js' 
+import express from "express";  
+import connectDB from "./Data/Data.js"; 
 import './models/cluseter.js'
-const app=express(); 
-const port=3000;
-import mongoose from "mongoose"; 
 
-const URL="mongodb://localhost:27017/cluster"
+const app=express();
+const port=3000;  
+const URL="mongodb://localhost:27017"  
+connectDB(URL)
 
-connection(URL) 
-app.listen(port)
+
+
+app.listen(port,()=>{ 
+    console.log(`Server is Listning at http://localhost:${port}`);
+})

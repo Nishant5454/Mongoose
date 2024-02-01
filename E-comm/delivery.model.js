@@ -7,8 +7,17 @@ const productdelivery=new mongoose.Schema({
 
     },
     pincode:{ 
-        require:true 
+        require:true,
+        state:true,
+        district:true,
+        landmark:true
 
+     
+    }, 
+    status:{ 
+        type:String, 
+        enum:[PENDING,ORDERED,CANCELLED],
+        default:PENDING
     }
 },{timestamps:true}) 
 export const UserDel=mongoose.model("UserDel",productdelivery)  

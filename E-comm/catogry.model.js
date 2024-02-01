@@ -16,6 +16,10 @@ const productcatogry=new mongoose.Schema({
         type:String, 
         unique:true, 
         avilable:Boolean
+    },
+    price:{ 
+        stock:Number, 
+        default:0
     }
 },{timestamps:true}) 
 export const productdata=mongoose.model("productdata",productcatogry)

@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
-const connectDB=async(DATABASE_URL)=>{
+const connectDB=async(URL)=>{
     try{
-        const DB_OPTION={
-            dbname:'cluster',
+        const DB_OPTIONS={
+            dbname:'Nishant',
         }
-        await mongoose.connect(DATABASE_URL,DB_OPTION);
+        await mongoose.connect(URL,DB_OPTIONS);
         console.log("Connection Setup Sucseefully");
     }
     catch(err){
         console.log(err);
     }
 }
-export default connectDB
+export default connectDB 

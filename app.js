@@ -9,5 +9,6 @@ const DATABASE_URL="mongodb://localhost:27017/cluster"
     //console.log("Data Connection SetUp Sucseesfully");
 //}) 
 connectd(DATABASE_URL);
+createDoc();
 
 app.listen(port); 

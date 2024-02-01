@@ -12,5 +12,4 @@ const Userdata=mongoose.Schema({
     
     
     {timestamps:true}); 
-    const subtodo=mongoose.model("SUbtodo",Userdata); 
-    
+   export const subtodo=mongoose.model("SUbtodo",Userdata); 
