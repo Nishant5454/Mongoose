@@ -1,54 +1,53 @@
 <%- include('./partials/header.ejs') %>    
 <%- include('./partials/style.ejs') %> 
 <%- include('./partials/jsson.ejs') %>
-
 <body style="background-color: green;">
-    <table>
-        <tr>
-            <td>
-                <!--HTML form for crud operation-->
-                <form autocomplete="off" onsubmit="onFormSubmit()">
-                    <div>
-                        <label for="fullName">Full Name</label>
-                        <input type="text" name="fullName" id="fullName" >
-                    </div>
-                    <div>
-                        <label for="empCode">EMP Code</label>
-                        <input type="text" name="empCode" id="empCode" >
-                    </div>
-                    <div>
-                        <label for="salary">Salary</label>
-                        <input type="text" name="salary" id="salary">
-                    </div>
-                    <div>
-                        <label for="city">City</label>
-                        <input type="text" name="city" id="city">
-                    </div>
-                    <div class="form_action--button">
-                        <input type="submit" value="Submit">
-                        <input type="reset" value="Reset">
-                    </div>
-                </form>
-            </td>
-            <td>
-                <table class="list" id="employeeList">
-                    <thead>
-                        <tr>
-                            <th>Full Name</th>
-                            <th>EMP Code</th>
-                            <th>Salary</th>
-                            <th>City</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
+  <table>
+      <tr>
+          <td>
+              <!--HTML form for crud operation-->
+              <form autocomplete="off" onsubmit="onFormSubmit()">
+                  <div>
+                      <label for="fullName">Full Name</label>
+                      <input type="text" name="fullName" id="fullName" >
+                  </div>
+                  <div>
+                      <label for="empCode">EMP Code</label>
+                      <input type="text" name="empCode" id="empCode" >
+                  </div>
+                  <div>
+                      <label for="salary">Salary</label>
+                      <input type="text" name="salary" id="salary">
+                  </div>
+                  <div>
+                      <label for="city">City</label>
+                      <input type="text" name="city" id="city">
+                  </div>
+                  <div class="form_action--button">
+                      <input type="submit" value="Submit">
+                      <input type="reset" value="Reset">
+                  </div>
+              </form>
+          </td>
+          <td>
+              <table class="list" id="employeeList">
+                  <thead>
+                      <tr>
+                          <th>Full Name</th>
+                          <th>EMP Code</th>
+                          <th>Salary</th>
+                          <th>City</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
 
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </table>
-  </body>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+  </table>
+</body>
 
       <%-include('./partials/footer.ejs') %>
     

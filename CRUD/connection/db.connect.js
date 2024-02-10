@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const CONNECTION=async(URL)=>{ 
     try{ 
         const DB_OPTION={ 
-            dbname:"TIT",
+            dbname:"Employee",
         }; 
         await mongoose.connect(URL,DB_OPTION);
         console.log("Database Connected to Server");
