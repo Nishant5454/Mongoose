@@ -11,23 +11,14 @@ var userSchema = new mongoose.Schema({
       type:String, 
       required:true, 
       lowercase:true
+   }, 
+   password:{ 
+      type:String,
+      required:true,
+      lowercase:true,
    },
 })
 
-const userTable=mongoose.model('Student',userSchema); 
-const userdata=async ()=>{ 
-   try{
-      const userdoc=new userTable({
-         name:'Nishant',
-         email:'mongoose@gmail.com'
-      }) 
-      const result=await userdoc.save();
-      console.log(result); 
-      
-   }
-   catch(error){
-      console.log(error);
-   }
+const UserModel=mongoose.model('LoginData',userSchema); 
 
-} 
-export default userdata
+export default UserModel

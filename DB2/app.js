@@ -1,12 +1,20 @@
-import express from "express";  
+import express from "express"; 
 import connectDB from "./Data/Data.js"; 
-import userdata from "./models/cluseter.js"
-
-const app=express();
-const port=3000;  
+import userdata from "./models/cluseter.js" 
+import web from './router/web.js' 
 const URL="mongodb://localhost:27017"  
-connectDB(URL)
-userdata();
+connectDB(URL);
+const app=express(); 
+app.set('view engine','ejs')  
+app.use(express.urlencoded({extended: true}))
+
+const port=3000; 
+
+
+
+userdata();  
+app.use('/',web) 
+
 
 
 app.listen(port,()=>{ 
